@@ -1,0 +1,77 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace bunifu
+{
+    public partial class LoadingForm : Form
+    {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+          (
+              int nLeftRect,     // x-coordinate of upper-left corner
+              int nTopRect,      // y-coordinate of upper-left corner
+              int nRightRect,    // x-coordinate of lower-right corner
+              int nBottomRect,   // y-coordinate of lower-right corner
+              int nWidthEllipse, // width of ellipse
+              int nHeightEllipse // height of ellipse
+          );
+        public LoadingForm()
+        {
+            InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
+            ProgressBar1.Value = 0;
+        }
+
+        private void bunifuLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoadingForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+   
+
+
+        private void bunifuPictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ProgressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick_1(object sender, EventArgs e)
+        {
+            ProgressBar1.Value += 1;
+            ProgressBar1.Text = ProgressBar1.Value.ToString() + "%";
+            if (ProgressBar1.Value == 100)
+            {
+                timer1.Enabled = false;
+                Form1 f = new Form1();
+                this.Hide();
+                f.ShowDialog(); 
+               
+                
+            }
+        }
+
+        private void LoadingForm_Load_1(object sender, EventArgs e)
+        {
+
+        }
+    }
+}

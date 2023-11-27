@@ -1,0 +1,28 @@
+compare analyze, examine 
+monozygotic identical, same
+twin pair,  similitude
+dizygotic dizygous, nonidentical
+researcher investigator, scientist
+begin start
+separate divide, differentiate
+effect result, cause
+gene cistron, factor
+environment surroundings, condition
+analyze compare, examine
+examine analyze, compare
+identical same, monozygotic
+pair twin, similitude
+similitude twin, pair
+dizygous dizygotic, nonidentical
+investigator researcher, scientist
+start begin
+divide separate,  differentiate
+result effect, cause
+cause result, effect
+condition environment, surroundings
+nonidentical dizygous,dizygotic
+scientist investigator, researcher
+differentiate separate, divide
+cistron gene, factor
+factor gene,cistron
+same identical, monozygotic
